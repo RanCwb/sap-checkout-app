@@ -1,9 +1,19 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 const homeLogo = require('../../assets/images/home-logo.png');
 const LoginScreen = () => {
+
+
+  const navigation = useNavigation<any>();
+
+
+  function navigateToHome() {
+    navigation.navigate("HomeScreen");
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -27,7 +37,7 @@ const LoginScreen = () => {
         />
       </View>
 
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity onPress={navigateToHome} style={styles.loginButton}>
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
 
