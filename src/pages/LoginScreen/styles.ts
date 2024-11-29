@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import theme from '../../theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,19 +10,22 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   image: {
-    width: 150,
-    height: 150,
-    marginBottom: 20,
+    width: 312,
+    height: 234,
+    marginBottom: 8,
   },
   welcomeText: {
-    fontSize: 32,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#000000',
+    fontFamily: theme.fonts.adLamDisplay,
+    marginBottom: 20,
   },
   subTitleText: {
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#000000',
+    fontFamily: theme.fonts.adLamDisplay,
   },
   highlight: {
     color: '#3A42FF',
@@ -29,33 +33,42 @@ const styles = StyleSheet.create({
   inputContainer: {
     width: '100%',
     paddingHorizontal: 16,
-    marginTop: 20,
+    marginTop: 61,
   },
   input: {
+    height: 63,
     borderWidth: 1,
     borderColor: '#3A42FF',
     borderRadius: 8,
     padding: 12,
-    marginBottom: 12,
-    fontSize: 16,
+    marginBottom: 25,
+    fontSize: 15,
+    fontFamily: theme.fonts.adLamDisplay,
+    fontWeight: 'bold',
     color: '#000000',
   },
   loginButton: {
     backgroundColor: '#3A42FF',
-    paddingVertical: 12,
     paddingHorizontal: 80,
-    borderRadius: 8,
+    borderRadius: 35,
     marginTop: 20,
+    maxWidth: 230,
+    height: 63,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   loginButtonText: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
+    fontFamily: theme.fonts.adLamDisplay,
+
   },
   forgotPasswordText: {
     color: '#3A42FF',
-    marginTop: 16,
-    textDecorationLine: 'underline',
+    marginTop: 35,
+    textDecorationLine: 'none',
+    fontFamily: theme.fonts.adLamDisplay,
   },
 });
 
